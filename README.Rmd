@@ -1,0 +1,36 @@
+---
+title: projecter
+author: "Chris Donovan\n"
+date: "`r format(Sys.Date(), '%B %d, %Y')`"
+output: 
+    github_document:
+        toc: true
+        toc_depth: 1
+        html_preview: true
+    html_document:
+        toc: true
+        toc_depth: 1
+        number_sections: true
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+
+# Introduction
+
+The projecter package is a small collection of functions that have made my life easier navigating projects. They are mostly wrappers for common functions that save time typing. This is very much a work in progress.
+
+# Installation
+
+You can install the development version of projecter from [GitHub](https://github.com/) with:
+
+``` r
+# install.packages("devtools")
+devtools::install_github("ChrisDonovan307/projecter")
+```

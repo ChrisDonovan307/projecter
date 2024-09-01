@@ -1,0 +1,13 @@
+Package: projecter
+Title: What the Package Does (One Line, Title Case)
+Version: 0.0.0.9000
+Authors@R: 
+    person("Chris", "Donovan", , "ctudonovan@gmail.com", role = c("aut", "cre"),
+           comment = c(ORCID = "YOUR-ORCID-ID"))
+Description: Some convenient functions for navigating data analysis projects.
+License: GPL (>= 3)
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.2
+Imports: 
+    utils

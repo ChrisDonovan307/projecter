@@ -1,0 +1,5 @@
+^projecter\.Rproj$
+^\.Rproj\.user$
+^ref/*
+^LICENSE\.md$
+^README\.Rmd$
