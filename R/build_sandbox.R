@@ -40,5 +40,5 @@ build_sandbox <- function() {
   )
 
   # Print what is in the sandbox
-  cat('Sandbox toys: my_list, my_nlist, my_vector, my_df')
+  cat('Sandbox objects: my_list, my_nlist, my_vector, my_df')
 }
