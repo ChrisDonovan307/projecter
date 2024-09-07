@@ -19,7 +19,7 @@ projecter <- function(make_folders = TRUE) {
       '8_markdown',
       '9_graveyard'
     )
-    lapply(folder_names, dir.create())
+    lapply(folder_names, dir.create)
   }
 
   # Create project files
