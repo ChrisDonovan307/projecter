@@ -2,6 +2,7 @@
 
 export(build_sandbox)
 export(clear_data)
+export(get_markdown)
 export(get_size)
 export(get_str)
 export(get_table)
