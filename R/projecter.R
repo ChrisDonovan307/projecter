@@ -19,11 +19,20 @@ projecter <- function(make_folders = TRUE) {
       '8_markdown',
       '9_graveyard'
     )
+    if (any(file.exists(folder_names))) {
+      indices <- which(file.exists(folder_names))
+      stop(
+        '\nFolder(s) ',
+        paste0(folder_names[indices], ', '),
+        ' already exist!'
+      )
+    }
     lapply(folder_names, dir.create)
+    cat('\n', paste0(folder_names, collapse = ', '), 'created.')
   }
 
   # Create project files
-  get_toc()
-  get_readme()
+  get_toc(open = FALSE)
+  get_readme(open = FALSE)
 
 }

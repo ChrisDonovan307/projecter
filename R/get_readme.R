@@ -1,5 +1,7 @@
 #' Get README
 #'
+#' @param open if `TRUE`, opens the `README.Rmd` file after creating it
+#'
 #' @description
 #' Create a template of a README file with some options that are objectively
 #' convenient.
@@ -9,7 +11,7 @@
 #'
 #' @examples
 #' get_readme()
-get_readme <- function() {
+get_readme <- function(open = TRUE) {
 
   # Make README template
   template <- paste0(
@@ -37,8 +39,10 @@ get_readme <- function() {
   writeLines(template, 'README.Rmd')
 
   # Print message and path to console
-  cat('README.Rmd created')
+  cat('\nREADME.Rmd created')
 
-  # Open new markdown
-  file.edit('README.Rmd')
+  # Open readme
+  if (open == TRUE) {
+    file.edit('README.Rmd')
+  }
 }

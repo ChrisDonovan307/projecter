@@ -6,7 +6,8 @@
 #'
 #' @examples
 #' get_toc()
-get_toc <- function(toc = 'table_of_contents.R') {
+get_toc <- function(toc = 'table_of_contents.R',
+                    open = TRUE) {
 
   if (file.exists(toc)) {
     stop(toc, ' already exists!')
@@ -26,6 +27,8 @@ get_toc <- function(toc = 'table_of_contents.R') {
   )
 
   writeLines(template, toc)
-  cat(toc, 'created')
-  file.edit(toc)
+  cat('\n', toc, ' created', sep = '')
+  if (open == TRUE) {
+    file.edit(toc)
+  }
 }

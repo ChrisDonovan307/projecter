@@ -4,7 +4,10 @@
 \alias{get_readme}
 \title{Get README}
 \usage{
-get_readme()
+get_readme(open = TRUE)
+}
+\arguments{
+\item{open}{if \code{TRUE}, opens the \code{README.Rmd} file after creating it}
 }
 \value{
 creates 'README.Rmd' in root folder

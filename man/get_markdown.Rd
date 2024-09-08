@@ -4,11 +4,13 @@
 \alias{get_markdown}
 \title{Get Markdown}
 \usage{
-get_markdown(file_name = "template")
+get_markdown(file_name = "markdown", open = TRUE)
 }
 \arguments{
 \item{file_name}{the file name of the markdown to create. Can include the
 \code{.Rds} suffix or not.}
+
+\item{open}{if \code{TRUE}, opens the markdown file after creating it.}
 }
 \value{
 a markdown template at path \code{file_name}

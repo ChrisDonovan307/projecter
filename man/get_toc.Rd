@@ -4,7 +4,7 @@
 \alias{get_toc}
 \title{Get Table of Contents}
 \usage{
-get_toc(toc = "table_of_contents.R")
+get_toc(toc = "table_of_contents.R", open = TRUE)
 }
 \description{
 Creates a Table of Contents file in the root directory

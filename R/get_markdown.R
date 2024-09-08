@@ -5,6 +5,7 @@
 #'
 #' @param file_name the file name of the markdown to create. Can include the
 #' `.Rds` suffix or not.
+#' @param open if `TRUE`, opens the markdown file after creating it.
 #'
 #' @return a markdown template at path `file_name`
 #' @export
@@ -12,7 +13,8 @@
 #' @examples
 #' get_markdown('my_markdown')
 #' get_markdown('8_markdowns/my_markdown.rds')
-get_markdown <- function(file_name = 'template') {
+get_markdown <- function(file_name = 'markdown',
+                         open = TRUE) {
 
   # Add a trailing .Rmd if it is not there already
   if (!grepl('\\.Rmd$', file_name)) {
@@ -47,8 +49,10 @@ get_markdown <- function(file_name = 'template') {
   writeLines(template, file_name)
 
   # Print message and path to console
-  cat(file_name, 'created')
+  cat('\n', file_name, ' created', sep = '')
 
-  # Open new markdown
-  file.edit(file_name)
+  # Open markdown
+  if (open == TRUE) {
+    file.edit(file_name)
+  }
 }
