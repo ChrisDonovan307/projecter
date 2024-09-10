@@ -11,6 +11,7 @@
 #'
 #' @examples
 #' get_readme()
+
 get_readme <- function(open = TRUE) {
 
   # Make README template
@@ -20,13 +21,10 @@ get_readme <- function(open = TRUE) {
     "author: \"Author\"\n",
     "date: \"`r Sys.Date()`\"\n",
     "output: \n",
-    "  html_document: \n",
+    "  github_document: \n",
     "    toc: yes \n",
-    "    toc_float: \n",
-    "      smooth_scroll: yes \n",
     "    toc_depth: 3 \n",
     "    number_sections: 3 \n",
-    "    theme: readable \n",
     "---\n\n",
     "```{r setup, include=FALSE}\n",
     "knitr::opts_chunk$set(echo = TRUE)\n",

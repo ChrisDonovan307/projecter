@@ -34,5 +34,6 @@ projecter <- function(make_folders = TRUE) {
   # Create project files
   get_toc(open = FALSE)
   get_readme(open = FALSE)
+  get_rprofile(open = FALSE)
 
 }

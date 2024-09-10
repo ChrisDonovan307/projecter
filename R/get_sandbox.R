@@ -1,6 +1,6 @@
 #' Build objects to play with
 #'
-#' @description `build_sandbox` creates objects to play around with in those
+#' @description `get_sandbox` creates objects to play around with in those
 #' moments when you briefly forget how R works or what computers are.
 #'
 #' @return The function creates: `my_list`, which contains numeric,
@@ -8,14 +8,14 @@
 #' which contains an array of numeric values; `my_df`, which contains numeric
 #' and character columns.
 #'
-#' @details The sandbox objects can be removed using the `remove_sandbox`
+#' @details The sandbox objects can be removed using the `get_sandbox`
 #' function.
 #'
 #' @seealso [remove_sandbox()]
 #' @export
 #'
 #' @examples
-build_sandbox <- function() {
+get_sandbox <- function() {
 
   my_list <<- list(1, 'a', TRUE, 'bleh', 5.51)
 
