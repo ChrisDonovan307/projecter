@@ -6,7 +6,7 @@ get_rprofile <- function(open = FALSE) {
 
   # Check if .Rprofile already exists
   if (file.exists('.Rprofile')) {
-    stop('\n.Rprofile already exists!')
+    stop('.Rprofile already exists.')
   }
 
   # Read lines from template and save as a new file

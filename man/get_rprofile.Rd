@@ -4,7 +4,7 @@
 \alias{get_rprofile}
 \title{Get a .Rprofile template}
 \usage{
-get_rprofile()
+get_rprofile(open = FALSE)
 }
 \description{
 Get a .Rprofile template

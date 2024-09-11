@@ -14,11 +14,15 @@
 
 get_readme <- function(open = TRUE) {
 
+  if (file.exists('README.Rmd')) {
+    stop('README.Rmd already exists.')
+  }
+
   # Make README template
   template <- paste0(
     "---\n",
-    "title: \"Title\"\n",
-    "author: \"Author\"\n",
+    "title: \'Title\'\n",
+    'author: \"Author\\n"\n',
     "date: \"`r Sys.Date()`\"\n",
     "output: \n",
     "  github_document: \n",
