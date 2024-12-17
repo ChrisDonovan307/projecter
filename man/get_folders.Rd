@@ -4,7 +4,7 @@
 \alias{get_folders}
 \title{get_folders}
 \usage{
-get_folders(folder_names = NULL)
+get_folders(path = ".", folder_names = NULL)
 }
 \arguments{
 \item{folder_names}{is a character vector names for folders.}

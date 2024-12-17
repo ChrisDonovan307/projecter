@@ -12,9 +12,10 @@
 #' @examples
 #' get_readme()
 
-get_readme <- function(open = TRUE) {
+get_readme <- function(path = 'README.Rmd',
+                       open = TRUE) {
 
-  if (file.exists('README.Rmd')) {
+  if (file.exists(path)) {
     stop('README.Rmd already exists.')
   }
 
@@ -38,13 +39,13 @@ get_readme <- function(open = TRUE) {
   )
 
   # Write the content to the file
-  writeLines(template, 'README.Rmd')
+  writeLines(template, path)
 
   # Print message and path to console
-  cat('\nREADME.Rmd created')
+  cat(paste('\n', path, 'created'))
 
   # Open readme
   if (open == TRUE) {
-    file.edit('README.Rmd')
+    file.edit(path)
   }
 }

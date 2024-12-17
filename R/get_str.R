@@ -31,6 +31,7 @@ get_str <- function(obj,
     if (all_cols == TRUE) {
       str(
         object = obj,
+        give.attr = FALSE,
         max.level = level,
         strict.width = strict.width,
         list.len = ncol(obj),
@@ -40,6 +41,7 @@ get_str <- function(obj,
     } else {
       str(
         object = obj,
+        give.attr = FALSE,
         max.level = level,
         strict.width = strict.width,
         vec.len = 100,
@@ -49,6 +51,7 @@ get_str <- function(obj,
   } else if (is.list(obj) && all_cols == TRUE) {
     str(
       object = obj,
+      give.attr = FALSE,
       max.level = level,
       strict.width = strict.width,
       vec.len = 100,
@@ -57,6 +60,7 @@ get_str <- function(obj,
   } else if (is.list(obj) && all_cols == FALSE) {
     str(
       object = obj,
+      give.attr = FALSE,
       max.level = level,
       strict.width = strict.width,
       list.len = 250,
@@ -66,6 +70,7 @@ get_str <- function(obj,
   } else if (all_cols == TRUE) {
     str(
       object = obj,
+      give.attr = FALSE,
       max.level = level,
       strict.width = strict.width,
       vec.len = 100,
@@ -75,6 +80,7 @@ get_str <- function(obj,
   } else {
     str(
       object = obj,
+      give.attr = FALSE,
       max.level = level,
       strict.width = strict.width,
       ...
