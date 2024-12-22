@@ -26,7 +26,13 @@ get_str <- function(obj,
                     level = 2,
                     all_cols = TRUE,
                     strict.width = 'cut',
+                    remove_attr = TRUE,
                     ...) {
+  # Remove attributes by default
+  if (remove_attr == TRUE) {
+    attributes(obj) <- attributes(obj)[setdiff(names(attributes(obj)), "spec")]
+  }
+
   if (is.data.frame(obj)) {
     if (all_cols == TRUE) {
       str(

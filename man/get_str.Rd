@@ -4,7 +4,14 @@
 \alias{get_str}
 \title{User friendly wrapper for \code{str()}}
 \usage{
-get_str(obj, level = 2, all_cols = TRUE, strict.width = "cut", ...)
+get_str(
+  obj,
+  level = 2,
+  all_cols = TRUE,
+  strict.width = "cut",
+  remove_attr = TRUE,
+  ...
+)
 }
 \arguments{
 \item{obj}{an R object.}
