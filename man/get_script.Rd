@@ -6,7 +6,8 @@
 \usage{
 get_script(
   file_name,
-  directory = "4_scripts/",
+  use_default_dir = FALSE,
+  directory = NULL,
   open = TRUE,
   overwrite = FALSE,
   title = TRUE

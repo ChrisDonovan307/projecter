@@ -12,19 +12,29 @@
 #'
 #' @examples
 get_function <- function(file_name,
-                         directory = '3_functions/',
+                         use_default_dir = FALSE,
+                         directory = NULL,
                          open = TRUE,
                          overwrite = FALSE,
                          title = TRUE) {
 
-  # Check if the directory exists
-  if (!dir.exists(directory)) {
-    stop(directory, ' does not exist. Create folder first.')
+  # If using default dir, make directory input 3_functions
+  if (use_defualt_dir == TRUE) {
+    directory <- '3_functions/'
   }
 
-  # If there is no trailing slash on directory, add one
-  if (!grepl(directory, '/$')) {
-    directory <- paste0(directory, '/')
+  # Check if the directory exists
+  if (!is.null(directory)) {
+
+    # Stop if directory does not exist
+    if (!dir.exists(directory)) {
+      stop(directory, ' does not exist. Create folder first.')
+    }
+
+    # If there is no trailing slash on directory, add one
+    if (!grepl(directory, '/$')) {
+      directory <- paste0(directory, '/')
+    }
   }
 
   # If there is no file extension, add .R
@@ -33,7 +43,11 @@ get_function <- function(file_name,
   }
 
   # Combine directory and file name to get full path to script
-  full_path <- paste0(directory, file_name)
+  if (!is.null(directory)) {
+    full_path <- file_name
+  } else {
+    full_path <- paste0(directory, file_name)
+  }
 
   # Don't overwrite files unless specified
   if (overwrite == FALSE & file.exists(full_path)) {
@@ -46,6 +60,8 @@ get_function <- function(file_name,
   # Add formatted title if selected
   if (title == TRUE) {
     title <- unlist(strsplit(file_name, "\\.", fixed = FALSE))[1]
+    title <- unlist(strsplit(title, "/", fixed = FALSE))
+    title <- title[length(title)]
     title <- snakecase::to_title_case(title)
     template <- paste0(template, "# ", title, "\n")
   }

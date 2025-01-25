@@ -6,7 +6,8 @@
 \usage{
 get_function(
   file_name,
-  directory = "3_functions/",
+  use_default_dir = FALSE,
+  directory = NULL,
   open = TRUE,
   overwrite = FALSE,
   title = TRUE
