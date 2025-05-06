@@ -19,7 +19,7 @@
 #' @export
 #'
 #' @examples
-clear_data <- \(keep = NULL) {
+clear_data <- function(keep = NULL) {
   stopifnot(is.character(keep) | is.null(keep))
   keep_list <- as.list(keep)
   all_data_objects <- setdiff(ls(envir = .GlobalEnv), lsf.str(envir = .GlobalEnv))

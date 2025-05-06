@@ -1,4 +1,3 @@
-source("renv/activate.R")
 # Load utils so we can use install.packages()
 library(utils)
 
@@ -25,3 +24,5 @@ pacman::p_load(
 
 # Load current project
 devtools::load_all()
+
+source("renv/activate.R")

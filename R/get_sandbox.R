@@ -17,9 +17,10 @@
 #' @examples
 get_sandbox <- function() {
 
-  my_list <<- list(1, 'a', TRUE, 'bleh', 5.51)
+  out <- list()
+  out$list <- list(1, 'a', TRUE, 'bleh', 5.51)
 
-  my_nlist <<- list(
+  out$nlist <- list(
     colors = list('green', 'blue', 'red', 'purple'),
     weather = 'sunny',
     numbers = list(31, 456, 412, 46, 897, 2),
@@ -30,9 +31,9 @@ get_sandbox <- function() {
     )
   )
 
-  my_vector <<- c(1, 5, 3, 67, 8, 32, 5, 2)
+  out$vec <- c(1, 5, 3, 67, 8, 32, 5, 2)
 
-  my_df <<- data.frame(
+  out$df <- data.frame(
     name = c('jeff', 'ali', 'fred', 'jan'),
     age = c(29, 41, 59, 55),
     fav_color = c('green', 'blue', 'red', 'purple'),
@@ -40,5 +41,6 @@ get_sandbox <- function() {
   )
 
   # Print what is in the sandbox
-  cat('Sandbox objects: my_list, my_nlist, my_vector, my_df')
+  cat('Sandbox objects: list, nlist, vec, df')
+  return(out)
 }

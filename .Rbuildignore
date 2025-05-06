@@ -5,3 +5,4 @@
 ^ref/*
 ^LICENSE\.md$
 ^README\.Rmd$
+test/*

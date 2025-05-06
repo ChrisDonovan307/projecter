@@ -6,8 +6,7 @@ get_rprofile <- function(path = '.',
                          open = TRUE) {
 
   rprofile_content <-
-  '
-  # Load utils so we can use install.packages()
+  '# Load utils so we can use install.packages()
   library(utils)
 
   # Set CRAN mirror
@@ -46,8 +45,7 @@ get_rprofile <- function(path = '.',
 
   } else {
     cat("\\nCould not open table of contents.")
-  }
-  '
+  }'
 
   # Make sure the directory exists
   if (!dir.exists(path)) {
