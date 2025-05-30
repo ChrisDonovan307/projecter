@@ -4,7 +4,14 @@
 \alias{clear_data}
 \title{Remove data objects from the global environment}
 \usage{
-clear_data(keep = NULL)
+clear_data(keep = NULL, gc = FALSE)
+}
+\arguments{
+\item{keep}{Character vector of objects to keep, while everything else will
+be removed.}
+
+\item{gc}{Binary. If \code{TRUE}, run garbage collector (\code{gc()}) after clearing
+objects.}
 }
 \value{
 Global objects which are not functions are removed from the

@@ -12,6 +12,12 @@
 #'   `clear_data()` is meant to be used at the end of modular scripts. Pertinent
 #'   objects can either be saved to .rds or by using the `keep` argument.
 #'
+#' @param keep Character vector of objects to keep, while everything else will
+#'   be removed.
+#'
+#' @param gc Binary. If `TRUE`, run garbage collector (`gc()`) after clearing
+#'   objects.
+#'
 #' @return Global objects which are not functions are removed from the
 #'   environment.
 #'
@@ -19,10 +25,11 @@
 #' @export
 #'
 #' @examples
-clear_data <- function(keep = NULL) {
+clear_data <- function(keep = NULL, gc = FALSE) {
   stopifnot(is.character(keep) | is.null(keep))
   keep_list <- as.list(keep)
   all_data_objects <- setdiff(ls(envir = .GlobalEnv), lsf.str(envir = .GlobalEnv))
   remove_list <- setdiff(all_data_objects, keep_list)
   rm(list = remove_list, envir = .GlobalEnv)
+  if (gc == TRUE) gc()
 }

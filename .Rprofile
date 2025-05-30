@@ -22,6 +22,9 @@ pacman::p_load(
   usethis
 )
 
+# Prep vim function
+try(vim <- function() rstudiovim::rsvim_exec_file())
+
 # Load current project
 devtools::load_all()
 

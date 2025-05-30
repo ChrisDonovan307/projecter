@@ -19,7 +19,7 @@ get_function <- function(file_name,
                          title = TRUE) {
 
   # If using default dir, make directory input 3_functions
-  if (use_defualt_dir == TRUE) {
+  if (use_default_dir == TRUE) {
     directory <- '3_functions/'
   }
 
